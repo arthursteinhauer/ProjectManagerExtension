@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-04T07:09:35Z" product-name="projectmanager">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="estimated_time_in_hours.description">
+				<source>estimatedTimeInHours</source>
+			</trans-unit>
+			<trans-unit id="estimated_costs.description">
+				<source>estimatedCosts</source>
+			</trans-unit>
+			<trans-unit id="required_time_in_hours.description">
+				<source>requiredTimeInHours</source>
+			</trans-unit>
+			<trans-unit id="required_costs.description">
+				<source>requiredCosts</source>
+			</trans-unit>
+			<trans-unit id="project_finish_date.description">
+				<source>projectFinishDate</source>
+			</trans-unit>
+			<trans-unit id="status.description">
+				<source>status</source>
+			</trans-unit>
+			<trans-unit id="comment.description">
+				<source>comment</source>
+			</trans-unit>
+			<trans-unit id="files.description">
+				<source>files</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="project_manager.description">
+				<source>projectManager</source>
+			</trans-unit>
+			<trans-unit id="task.description">
+				<source>task</source>
+			</trans-unit>
+			<trans-unit id="business.description">
+				<source>business</source>
+			</trans-unit>
+			<trans-unit id="additional_costs.description">
+				<source>additionalCosts</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

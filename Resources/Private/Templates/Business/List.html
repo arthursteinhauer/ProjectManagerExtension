@@ -1,0 +1,200 @@
+{namespace m=Ast\Projectmanager\ViewHelpers}
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1><f:translate key="tx_projectmanager_domain_model_businesses" /></h1>
+        </div>
+    </div>
+    <f:flashMessages />
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-sm-4">                                       
+                    <f:form class="form-inline" action="list">
+                        <f:comment>
+                            <div class="form-group">
+                                 <f:form.select name="category" property="categories" options="{allCategories}" optionValueField="uid" optionLabelField="title"  prependOptionLabel="nach Kategorie suchen" prependOptionValue="" value="{category}" multiple="false" size="{1}" class="form-control" />                            
+                            </div>
+                        </f:comment>
+                        <div class="form-group input-group">
+                            <f:form.textfield class="form-control" name="search" placeholder="{f:translate(key:'search-for')}" value="{search}" /> 
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-search btn-info"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>    
+                    </f:form>                       
+                </div>    
+               
+                <div class="col-sm-1">
+                    <f:link.action action="new" arguments="{search: search, orderProperty : orderProperty, orderStr : orderStr}">
+                        <button aria-label="Add a Company" class="new-business btn btn-info" type="button">
+                            <span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <f:translate key="tx_projectmanager_domain_model_business" /> 
+                        </button>
+                    </f:link.action> 
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table  class="table businesslist table-striped table-condensed table-bordered">
+                    
+                        <tr>
+                            <th class="noWrap">
+                                 <f:if condition="{orderStr} == 'asc'">
+                                    <f:then>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty:'name', orderStr:'desc'}"><f:translate key="tx_projectmanager_domain_model_business.name" /></f:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty:'name', orderStr:'asc'}"><f:translate key="tx_projectmanager_domain_model_business.name" /></f:link.action>                                         
+                                    </f:else>
+                                </f:if>
+                            </th>
+                            <th class="noWrap">
+                                 <f:if condition="{orderStr} == 'asc'">
+                                    <f:then>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty:'categories.title', orderStr:'desc'}"><f:translate key="tx_projectmanager_domain_model_business.categories" /></f:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty:'categories.title', orderStr:'asc'}"><f:translate key="tx_projectmanager_domain_model_business.categories" /></f:link.action>                                         
+                                    </f:else>
+                                </f:if>
+                            </th>                            
+                            <th class="noWrap">
+                                 <f:if condition="{orderStr} == 'asc'">
+                                    <f:then>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty:'telephone', orderStr:'desc'}"><f:translate key="tx_projectmanager_domain_model_business.telephone" /></f:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty:'telephone', orderStr:'asc'}"><f:translate key="tx_projectmanager_domain_model_business.telephone" /></f:link.action>                                         
+                                    </f:else>
+                                </f:if>
+                            </th>                     
+                            <th class="noWrap">
+                                 <f:if condition="{orderStr} == 'asc'">
+                                    <f:then>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty: 'email', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_business.email" /></f:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty: 'email', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_business.email" /></f:link.action>                                         
+                                    </f:else>
+                                </f:if>
+                            </th>
+                            <th class="noWrap">
+                                <f:if condition="{orderStr} == 'asc'">
+                                    <f:then>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty: 'web', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_business.web" /></f:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action action="list" arguments="{search: search, orderProperty: 'web', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_business.web" /></f:link.action>
+                                    </f:else>
+                                </f:if>
+                            </th>
+                            <th class="noWrap width144"></th>
+                            <th class="noWrap width50"><f:translate key="tx_projectmanager_domain_model_project.files" /></th>                     
+                            <th class="noWrap width50"><f:translate key="tx_projectmanager_domain_model_user" /></th>
+                            <th class="noWrap width50"><f:translate key="tx_projectmanager_domain_model_projects" /></th>
+                            <th class="noWrap width50"><f:translate key="tx_projectmanager_domain_model_projects.newproject" /></th>
+                        </tr>
+                  
+                   
+                    <f:for each="{businesses}" as="business">
+                        <tr>
+                            <td><f:link.action action="show" arguments="{business : business, search: search, orderProperty : orderProperty, orderStr : orderStr}">{business.name}</f:link.action></td>
+                        <td>
+                        <f:for each="{business.categories}" as="category" iteration="iteration">
+                            {category.title}<f:if condition='{iteration.isLast}'><f:then></f:then><f:else>,</f:else></f:if>
+                        </f:for>
+                        </td>                            
+                        <td><a href="tel:{business.telephone}">{business.telephone}</a></td>
+                        <td><a href="mailto:{business.email}">{business.email}</a></td>
+                        <td><a href="{business.web}" target="_blank">{business.web}</a></td>
+                        <td class="noWrap">
+                            <f:link.action action="show" arguments="{business : business, search: search, orderProperty : orderProperty, orderStr : orderStr}"><button aria-label="Show a Company" class="btn btn-success" type="button"><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span></button></f:link.action>
+                            <f:link.action action="edit" arguments="{business : business, search: search, orderProperty : orderProperty, orderStr : orderStr}"><button aria-label="Edit a Company" class="btn btn-warning" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></button></f:link.action>
+                            <a href='javascript:ask("<f:uri.action action="delete" arguments="{business : business, search: search, orderProperty : orderProperty, orderStr : orderStr}" />", "{f:translate(key:'delete-confirm-question')}")'>
+                               <button aria-label="Delete a Company" class="btn btn-danger" type="button"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+                            </a>                    
+                        </td> 
+                            <td><f:link.action action="listFiles" arguments="{business : business, currentFolder:null, search: search, orderProperty : orderProperty, orderStr : orderStr}"><button aria-label="Show Files" class="btn btn-folder" type="button"><span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span></button></f:link.action></td>                        
+                        <td>
+                            <f:link.action action="list" controller="User" pluginName="Users" pageUid="{usersUid}" arguments="{business : business}"><button aria-label="Show User" class="btn btn-info" type="button"><span aria-hidden="true" class="glyphicon glyphicon-user"></span></button></f:link.action>
+                        </td>
+                        <td>
+                            <f:link.action action="list" controller="Project" pluginName="Projects" pageUid="{projectsUid}" arguments="{business : business}"><button aria-label="Show Projects" class="btn btn-info" type="button"><span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span></button></f:link.action>
+                        </td>
+                        <td>
+                            <f:link.action action="new" controller="Project" pluginName="Projects" pageUid="{projectsUid}" arguments="{business : business}"><button aria-label="Add a Project" class="new-project btn btn-info" type="button"><span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span><!--f:translate key="tx_projectmanager_domain_model_tasks" /--></button></f:link.action>
+                        </td>
+                        </tr>
+                    </f:for>
+                  
+                </table>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <nav>
+                <ul class="pagination">               
+                    <f:for each="{pagination}" as="paginator">
+                        <f:if condition='{paginator.class}'>
+                            <f:then>
+                                <f:if condition='{paginator.class} == "active"'>
+                                    <li class="active"><a href="#">{paginator.value}</a></li>
+                                </f:if>
+                                <f:if condition='{paginator.class} == "first"'>
+                                    <li>
+                                    <f:link.action action='list' arguments='{search: search, page: paginator.value, orderProperty:orderProperty, orderStr:orderStr}'>
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </f:link.action>
+                                    </li>
+                                </f:if>   
+                                <f:if condition='{paginator.class} == "back"'>   
+                                    <li>
+                                    <f:link.action action='list' arguments='{search: search, page: paginator.value, orderProperty:orderProperty, orderStr:orderStr}'>
+                                        <span aria-hidden="true">&lsaquo;</span>
+                                    </f:link.action>
+                                    </li>  
+                                </f:if>
+                                <f:if condition='{paginator.class} == "forward"'>
+                                    <li>
+                                    <f:link.action action='list' arguments='{search: search, page: paginator.value, orderProperty:orderProperty, orderStr:orderStr}'>
+                                        <span aria-hidden="true">&rsaquo;</span>
+                                    </f:link.action>
+                                    </li> 
+                                </f:if>
+                                <f:if condition='{paginator.class} == "last"'>
+                                    <li> 
+                                    <f:link.action action='list' arguments='{search: search, page: paginator.value, orderProperty:orderProperty, orderStr:orderStr}'>
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </f:link.action>
+                                    </li>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <li><f:link.action action='list' arguments='{search: search, page: paginator.value, orderProperty:orderProperty, orderStr:orderStr}'>
+                                    {paginator.value}
+                                </f:link.action></li>
+                            </f:else>
+                        </f:if>
+                    </f:for>               
+                </ul>
+            </nav>                   
+
+        </div>
+    </div>    
+
+</f:section>

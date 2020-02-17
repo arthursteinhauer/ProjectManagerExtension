@@ -1,0 +1,41 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for AdditionalCosts</h1>
+
+<f:flashMessages />
+
+<table  class="tx_projectmanager" >
+	<tr>
+		<th><f:translate key="tx_projectmanager_domain_model_additionalcosts.name" /></th>
+		<th><f:translate key="tx_projectmanager_domain_model_additionalcosts.costs" /></th>
+		<th><f:translate key="tx_projectmanager_domain_model_additionalcosts.comment" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{additionalCostss}" as="additionalCosts">
+		<tr>
+			<td><f:link.action action="show" arguments="{additionalCosts : additionalCosts}"> {additionalCosts.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{additionalCosts : additionalCosts}"> {additionalCosts.costs}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{additionalCosts : additionalCosts}"> {additionalCosts.comment}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{additionalCosts : additionalCosts}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{additionalCosts : additionalCosts}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New AdditionalCosts</f:link.action>
+</f:section>

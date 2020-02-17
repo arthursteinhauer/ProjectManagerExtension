@@ -1,0 +1,189 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1><f:translate key="tx_projectmanager_domain_model_times" />:
+                <f:if condition="{task}"><f:translate key="tx_projectmanager_domain_model_task" /> {task.name}</f:if>
+                <f:if condition="{user}"><f:translate key="tx_projectmanager_domain_model_user" /> {user.name}</f:if>
+            </h1>
+        </div>
+    </div>
+
+    <f:flashMessages />
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <f:form action="list" arguments="{task:task}">
+                        <div class="input-group">
+                            <f:form.textfield class="form-control" name="search" placeholder="{f:translate(key:'search-for')}" value="{search}" /> 
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-search btn-info"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </f:form>          
+                </div>
+                <div class="col-sm-1">
+                    <f:link.action action="new" arguments="{search: search, orderProperty: orderProperty, orderStr: orderStr, task:task}">
+                        <button aria-label="Add a Time" class="new-project btn btn-info" type="button">
+                            <span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <span aria-hidden="true" class="glyphicon glyphicon-time"><!--f:translate key="tx_projectmanager_domain_model_times" /--> 
+                        </button>
+                    </f:link.action> 
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+
+                <table  class="table timeslist table-striped table-condensed table-bordered">
+                    <tr>
+                        <th class="noWrap">
+                            <f:if condition="{orderStr} == 'asc'">
+                                <f:then>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'name', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_times.name" /></f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'name', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_times.name" /></f:link.action>                                         
+                                </f:else>
+                            </f:if>
+                        </th>                           
+                        <th class="noWrap">
+                            <f:if condition="{orderStr} == 'asc'">
+                                <f:then>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'task.name', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_times.task" /></f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'task.name', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_times.task" /></f:link.action>                                         
+                                </f:else>
+                            </f:if>
+                        </th>
+                        <th class="noWrap">
+                            <f:if condition="{orderStr} == 'asc'">
+                                <f:then>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'task.taskMaster.name', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_task.task_master" /></f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'task.taskMaster.name', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_task.task_master" /></f:link.action>
+                                </f:else>
+                            </f:if>
+                        </th>
+                        <th class="noWrap">
+                            <f:if condition="{orderStr} == 'asc'">
+                                <f:then>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'start', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_times.start" /></f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'start', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_times.start" /></f:link.action>                                         
+                                </f:else>
+                            </f:if>
+                        </th> 
+                         <th class="noWrap">
+                            <f:if condition="{orderStr} == 'asc'">
+                                <f:then>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'timeNeeded', orderStr: 'desc'}"><f:translate key="tx_projectmanager_domain_model_times.time_needed" /></f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.action action="list" arguments="{search: search, orderProperty: 'timeNeeded', orderStr: 'asc'}"><f:translate key="tx_projectmanager_domain_model_times.time_needed" /></f:link.action>                                         
+                                </f:else>
+                            </f:if>
+                        </th>                             
+                        <th class="noWrap width144"> </th>
+                   
+                    </tr>
+
+                    <f:for each="{times}" as="time">
+                        <tr>
+                            <td>{time.name}</td>
+                            <f:if condition="{time.task}"> 
+                                <f:then>        
+                                    <td>{time.task.name}</td>
+                                </f:then>
+                                <f:else>
+                                    <td class="danger">No entry!</td>
+                                </f:else>
+                            </f:if>
+                            <td>{time.task.taskMaster.name}</td>
+                            <td>{time.start -> f:format.date(format: 'd.m.Y H:i')}</td>       
+                            <td>{time.timeNeeded -> f:format.date(format: 'H:i')}</td>                            
+                            <td class="noWrap">
+                                <f:link.action action="show" arguments="{times : time, search: search, orderProperty: orderProperty, orderStr: orderStr, task:task}"><button aria-label="Show a Time" class="btn btn-success" type="button"><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span></button></f:link.action>
+                                <f:link.action action="edit" arguments="{times : time, search: search, orderProperty: orderProperty, orderStr: orderStr, task:task}"><button aria-label="Edit a Time" class="btn btn-warning" type="button"><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></button></f:link.action>
+                                <a href='javascript:ask("<f:uri.action action="delete" arguments="{times : time, search: search, orderProperty: orderProperty, orderStr: orderStr, task:task}" />", "{f:translate(key:'delete-confirm-question')}")'>
+                                   <button aria-label="Delete a Time" class="btn btn-danger" type="button"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+                                </a>
+                            </td>
+                        </tr>
+
+                    </f:for>
+                </table>
+
+            </div>
+        </div>
+        <div class="panel-footer">
+            <nav>
+                <ul class="pagination">               
+                    <f:for each="{pagination}" as="paginator">
+                        <f:if condition='{paginator.class}'>
+                            <f:then>
+                                <f:if condition='{paginator.class} == "active"'>
+                                    <li class="active"><a href="#">{paginator.value}</a></li>
+                                </f:if>
+                                <f:if condition='{paginator.class} == "first"'>
+                                    <li>
+                                    <f:link.action action='list' arguments='{search: search, orderProperty: orderProperty, orderStr: orderStr, page: paginator.value, task:task}'>
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </f:link.action>
+                                    </li>
+                                </f:if>   
+                                <f:if condition='{paginator.class} == "back"'>   
+                                    <li>
+                                    <f:link.action action='list' arguments='{search: search, orderProperty: orderProperty, orderStr: orderStr, page: paginator.value, task:task}'>
+                                        <span aria-hidden="true">&lsaquo;</span>
+                                    </f:link.action>
+                                    </li>  
+                                </f:if>
+                                <f:if condition='{paginator.class} == "forward"'>
+                                    <li>
+                                    <f:link.action action='list' arguments='{search: search, orderProperty: orderProperty, orderStr: orderStr, page: paginator.value, task:task}'>
+                                        <span aria-hidden="true">&rsaquo;</span>
+                                    </f:link.action>
+                                    </li> 
+                                </f:if>
+                                <f:if condition='{paginator.class} == "last"'>
+                                    <li> 
+                                    <f:link.action action='list' arguments='{search: search, orderProperty: orderProperty, orderStr: orderStr, page: paginator.value, task:task}'>
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </f:link.action>
+                                    </li>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <li><f:link.action action='list' arguments='{search: search, orderProperty: orderProperty, orderStr: orderStr, page: paginator.value, task:task}'>
+                                    {paginator.value}
+                                </f:link.action></li>
+                            </f:else>
+                        </f:if>
+                    </f:for>               
+                </ul>
+            </nav>                   
+
+        </div>
+    </div>  
+    
+</f:section>

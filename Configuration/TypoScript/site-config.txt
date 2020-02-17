@@ -1,0 +1,290 @@
+config{
+
+    no_cache = 0
+    concatenateJs = 0
+    concatenateCss = 0
+    compressJs = 0
+    compressCss = 0
+  
+  # Meta-Tags1
+    doctype = html5
+    htmlTag_setParams = lang="de"
+
+    metaCharset = utf-8
+
+    redirectOldLinksToNew = 0         
+   
+    uniqueLinkVars = 1   
+    linkVars = L(0-3)
+    disablePrefixComment = 1  
+    simulateStaticDocuments = 0
+    prefixLocalAnchors = all
+    baseURL = http://projectmanager.website-professional.de/
+    absRelPath = /
+    tx_realurl_enable = 1
+
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 0
+  
+    sys_language_uid = 0
+    language = de
+    locale_all = de_DE.UTF-8    
+
+    
+
+    sys_language_overlay = hideNonTranslated
+#      sys_language_overlay = 0
+    sys_language_mode = string  
+    contentObjectExceptionHandler = 0
+}
+
+temp.language = TEXT
+temp.language.value = de
+
+[globalVar = GP:L=1]
+     config.sys_language_uid = 1
+     config.language = en
+     config.locale_all = en_GB.UTF-8
+//     config.htmlTag_langKey= en
+     config.htmlTag_setParams = lang="en"
+     temp.language.value = en
+     
+[globalVar = GP:L=2]
+     config.sys_language_uid = 2
+     config.language = fr
+     config.locale_all = fr_FR.UTF-8
+//     config.htmlTag_langKey= fr
+     config.htmlTag_setParams = lang="fr"
+     temp.language.value = fr
+
+[globalVar = GP:L=3]
+     config.sys_language_uid = 3
+     config.language = nl
+     config.locale_all = nl_NL.UTF-8
+//     config.htmlTag_langKey= nl
+     config.htmlTag_setParams = lang="nl"
+     temp.language.value = nl
+
+[global]
+
+lib.language < temp.language
+
+page = PAGE
+page.typeNum = 0
+page.headTag(
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+)
+page.includeJSFooterlibs.jquery >
+page.includeJS {
+    file1 =  EXT:projectmanager/Resources/Public/JQuery/JavaScript/jquery-2.1.4.min.js 
+#    file1 = EXT:projectmanager\Resources\Public\JavaScript\JQuery-3.3.2\jquery-3.3.1.min.js
+    file1.forceOnTop = 1
+}
+page.includeCSS {
+    file1 = EXT:projectmanager/Resources/Public/BootstrapSass3.3.7/assets/stylesheets/_bootstrap.scss
+    file2 = EXT:projectmanager/Resources/Public/fontawesome-free-5.0.6/web-fonts-with-css/scss/fontawesome.scss
+    file3 = EXT:projectmanager/Resources/Public/JQuery/Css/jquery-ui.css
+    file4 = EXT:projectmanager/Resources/Public/Bootstrap/Css/bootstrap-datetimepicker.min.css
+    file5 = EXT:projectmanager/Resources/Public/Bootstrap/Css/fileinput.min.css
+    file6 = EXT:projectmanager/Resources/Public/Bootstrap/Css/bootstrap-theme.min.css
+    file7 = EXT:projectmanager/Resources/Public/Css/ProjectManager.css
+}
+page.includeJSFooter {
+    file1 = EXT:projectmanager/Resources/Public/bootstrap-3.3.7-dist/js/bootstrap.min.js
+    file2 = EXT:projectmanager/Resources/Public/JQuery/JavaScript/jquery-ui.js
+    file3 = EXT:projectmanager/Resources/Public/Bootstrap/JavaScript/moment-with-locales.js
+    file4 = EXT:projectmanager/Resources/Public/Bootstrap/JavaScript/bootstrap-datetimepicker.min.js
+    file5 = EXT:projectmanager/Resources/Public/Bootstrap/JavaScript/fileinput.min.js
+    file6 = EXT:projectmanager/Resources/Public/JavaScript/js.js
+}
+
+
+
+page.headerData.10 = TEXT
+page.headerData.10.value  (
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+)
+
+
+############# Logo ##########################
+
+lib.logo = IMAGE
+lib.logo {
+
+  file = EXT:projectmanager/Resources/Public/Images/projekt-manager-logo.png
+  params = class="logo img-responsive"
+#  stdWrap.typolink.parameter = 1
+  stdWrap.wrap = <a href="/" title="home">|</a>
+#  stdWrap.typolink.ATagParams = class="logo-link"
+#  stdWrap.typolink.title = zur Startseite
+}
+
+
+#############Bootstrap Navbar ###############
+
+lib.navbar = HMENU
+lib.navbar{
+  wrap = <ul class="nav navbar-nav">|</ul>
+#  includeNotInMenu = 1
+  1 = TMENU
+  1 {          
+    expAll = 1
+    NO = 1
+    NO {                  
+      wrapItemAndSub = <li>|</li><li class="divider"></li>|*||*|<li>|</li>
+      stdWrap.htmlSpecialChars = 1       
+    }
+    ACT = 1
+    ACT {       
+      wrapItemAndSub = <li class="active">|</li><li class="divider"></li>|*||*|<li class="active">|</li>
+      ATagParams = class="active"
+      stdWrap.htmlSpecialChars = 1
+    }     
+    IFSUB = 1
+    IFSUB{                            
+      wrapItemAndSub = <li class="dropdown">|</li><li class="divider"></li>|*||*|<li class="dropdown">|</li>
+      linkWrap = |<span class="caret"></span>
+      ATagBeforeWrap = 1  
+#     ATagParams = class="dropdown-toggle" data-toggle="dropdown"   
+      ATagParams = class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"    
+    }          
+    ACTIFSUB = 1
+    ACTIFSUB{                  
+      wrapItemAndSub = <li class="dropdown active">|</li><li class="divider"></li>|*||*|<li class="dropdown active">|</li>
+      linkWrap = |<span class="caret"></span>
+      ATagBeforeWrap = 1       
+#     ATagParams = class="dropdown-toggle active" data-toggle="dropdown"
+      ATagParams = class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+    }  
+  }
+  2 = TMENU
+  2 {             
+    wrap = <ul class="dropdown-menu" aria-labelledby="dropdownMenu" role="menu">|</ul>
+    expAll = 1
+    NO = 1
+    NO {                           
+      wrapItemAndSub = <li>|</li>    
+      stdWrap.htmlSpecialChars = 1
+    }
+    ACT = 1
+    ACT {                  
+      wrapItemAndSub = <li class="active">|</li>
+      ATagParams = class="active"
+      stdWrap.htmlSpecialChars = 1
+    }    
+  }     
+}
+
+
+
+
+# footer navigation
+
+lib.footernav = HMENU
+lib.footernav{
+  wrap = <ul class="bottom-navi">|</ul>
+  special = list
+  special.value = 7,8
+  1 = TMENU
+  1 {
+    expAll = 1
+    NO = 1
+    NO {
+      wrapItemAndSub = <li>|</li>
+      stdWrap.htmlSpecialChars = 1
+    }
+    ACT = 1
+    ACT {
+      wrapItemAndSub = <li class="active">|</li>
+      ATagParams = class="active"
+      stdWrap.htmlSpecialChars = 1
+    }   
+  }
+}
+
+
+
+lib.languagenav = HMENU
+lib.languagenav {
+        special = language
+        special.value = 0,1,2,3
+        special.normalWhenNoLanguage = 0
+        1 = TMENU
+        1 {
+               wrap = <ul class="language">|</ul>
+                # Normal link to language that exists:
+                NO = 1
+#                NO.allWrap = |*| | *  |*| |
+                NO.allWrap = <li>|</li>
+#                NO.linkWrap = <b style="background-color : grey"> | </b>
+                NO.stdWrap.setCurrent = Deutsch || English || Français || Nederlands  
+                NO.stdWrap.current = 1
+
+                # Current language selected:
+                ACT < .NO
+#                ACT.linkWrap = <b style="background-color : red"> | </b>
+                ACT.allWrap = <li class="active">|</li>
+                # Language that is NOT available:
+                USERDEF1 < .NO
+#                USERDEF1.linkWrap = <span style="background-color : yellow"> | </span>
+                USERDEF1.doNotLinkIt = 0
+        }
+}
+
+
+lib.currentBackendLayoutUid = TEXT
+lib.currentBackendLayoutUid {
+  data = field:backend_layout
+  ifEmpty.cObject = TEXT
+  ifEmpty.cObject.data = levelfield: -2, backend_layout_next_level, slide
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+   file = EXT:projectmanager/Resources/Private/Templates/Page/Template.html
+   partialRootPath = EXT:projectmanager/Resources/Private/Partials/Page
+   layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/Page
+   variables {
+
+     content1 = CONTENT
+     content1 {
+       table = tt_content
+       select.includeRecordsWithoutDefaultTranslation = 1
+       select.languageField = sys_language_uid
+       select.orderBy = sorting
+       select.where = colPos=0
+     }
+ 
+     content2 = CONTENT
+     content2 {
+       table = tt_content
+       select.includeRecordsWithoutDefaultTranslation = 1
+       select.languageField = sys_language_uid
+       select.orderBy = sorting
+       select.where = colPos=1
+     }  
+
+     content3 = CONTENT
+     content3 {
+       table = tt_content
+       select.includeRecordsWithoutDefaultTranslation = 1
+       select.languageField = sys_language_uid
+       select.orderBy = sorting
+       select.where = colPos=2
+     }
+   }
+}
+
+plugin.tx_felogin_pi1.templateFile = EXT:projectmanager/Resources/Private/Templates/FeLogin/frontendlogin.html
+
+
+

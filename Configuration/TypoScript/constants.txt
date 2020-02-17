@@ -1,0 +1,105 @@
+
+plugin.tx_projectmanager_businesses {
+	view {
+		# cat=plugin.tx_projectmanager_businesses/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_businesses/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_businesses/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_businesses//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_projectmanager_projects {
+	view {
+		# cat=plugin.tx_projectmanager_projects/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_projects/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_projects/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_projects//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_projectmanager_tasks {
+	view {
+		# cat=plugin.tx_projectmanager_tasks/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_tasks/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_tasks/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_tasks//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_projectmanager_mytasks {
+	view {
+		# cat=plugin.tx_projectmanager_mytasks/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_mytasks/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_mytasks/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_mytasks//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_projectmanager_users {
+	view {
+		# cat=plugin.tx_projectmanager_users/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_users/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_users/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_users//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_projectmanager_times {
+	view {
+		# cat=plugin.tx_projectmanager_times/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_times/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_times/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_times//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_projectmanager_bugs {
+	view {
+		# cat=plugin.tx_projectmanager_bugs/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:projectmanager/Resources/Private/Templates/
+		# cat=plugin.tx_projectmanager_bugs/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:projectmanager/Resources/Private/Partials/
+		# cat=plugin.tx_projectmanager_bugs/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:projectmanager/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_projectmanager_bugs//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

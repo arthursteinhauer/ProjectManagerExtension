@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-04T07:09:35Z" product-name="projectmanager">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="estimated_time_in_hours.description">
+				<source>estimatedTimeInHours</source>
+			</trans-unit>
+			<trans-unit id="estimated_costs.description">
+				<source>estimatedCosts</source>
+			</trans-unit>
+			<trans-unit id="required_time_in_hours.description">
+				<source>requiredTimeInHours</source>
+			</trans-unit>
+			<trans-unit id="required_costs.description">
+				<source>requiredCosts</source>
+			</trans-unit>
+			<trans-unit id="approach_description.description">
+				<source>approachDescription</source>
+			</trans-unit>
+			<trans-unit id="task_finish_date.description">
+				<source>taskFinishDate</source>
+			</trans-unit>
+			<trans-unit id="status.description">
+				<source>status</source>
+			</trans-unit>
+			<trans-unit id="comment.description">
+				<source>comment</source>
+			</trans-unit>
+			<trans-unit id="files.description">
+				<source>files</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="task_master.description">
+				<source>taskMaster</source>
+			</trans-unit>
+			<trans-unit id="times.description">
+				<source>times</source>
+			</trans-unit>
+			<trans-unit id="bugs.description">
+				<source>bugs</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

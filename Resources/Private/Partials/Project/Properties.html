@@ -1,0 +1,130 @@
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.name" /></label>
+    </div>
+    <div class="col-sm-10">
+        <h3 class="margin-top-0"><span class="label label-success">{project.name}</span></h3>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.description" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.description}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.categories" /></label>
+    </div>
+    <div class="col-sm-10">
+        <f:for each="{project.categories}" as="category" iteration="iteration">
+            {category.title}<f:if condition='{iteration.isLast}'><f:then></f:then><f:else>,</f:else></f:if>
+        </f:for>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.business" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.business.name}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.project_manager" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.projectManager.username}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.estimated_time_in_hours" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.estimatedTimeInHours} <f:translate key="hours" />
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.estimated_costs" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.estimatedCosts} €
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.required_time_in_hours" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.requiredTimeInHours} <f:translate key="hours" />
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.required_costs" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.requiredCosts} €
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.project_start_date" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.projectStartDate -> f:format.date(format: 'd.m.Y H:i')}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.project_finish_date" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.projectFinishDate -> f:format.date(format: 'd.m.Y H:i')}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.estimated_project_finish_date" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.estimatedProjectFinishDate -> f:format.date(format: 'd.m.Y H:i')}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.status" /></label>
+    </div>
+    <div class="col-sm-10">
+        {selectedStatusEntry}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.critical" /></label>
+    </div>
+    <div class="col-sm-10">
+        <f:if condition="{project.critical}==1">
+            <f:then>
+              <f:translate key="tx_projectmanager_domain_model_project.critical.true" />
+            </f:then>
+            <f:else>
+              <f:translate key="tx_projectmanager_domain_model_project.critical.false" />  
+            </f:else>
+        </f:if>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_project.comment" /></label>
+    </div>
+    <div class="col-sm-10">
+        {project.comment}
+    </div>
+</div>
+

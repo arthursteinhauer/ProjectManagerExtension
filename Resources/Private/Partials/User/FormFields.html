@@ -1,0 +1,97 @@
+{namespace as=Ast\Projectmanager\ViewHelpers}
+<div class="form-group row">
+    <label for="username">
+        <f:translate key="tx_projectmanager_domain_model_user.username" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="username" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.username')}" />     
+    </div>    
+</div>   
+<div class="form-group row">
+    <label for="password">
+        <f:translate key="tx_projectmanager_domain_model_user.password" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.password property="password" class="form-control" />
+    </div>    
+</div>  
+<div class="form-group row">
+    <label for="name">
+        <f:translate key="tx_projectmanager_domain_model_user.name" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="name" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.name')}" />
+    </div>    
+</div>                
+<div class="form-group row">        
+    <label for="address">
+        <f:translate key="tx_projectmanager_domain_model_user.street" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="address" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.street')}" />
+    </div>    
+</div>                 
+<div class="form-group row">        
+    <label for="zip">
+        <f:translate key="tx_projectmanager_domain_model_user.zip" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="zip" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.zip')}" />
+    </div>    
+</div>        
+<div class="form-group row">        
+    <label for="city">
+        <f:translate key="tx_projectmanager_domain_model_user.city" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="city" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.city')}" />
+    </div>    
+</div>         
+<div class="form-group row">        
+    <label for="country">
+        <f:translate key="tx_projectmanager_domain_model_user.country" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="country" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.country')}" />
+    </div>    
+</div>               
+<div class="form-group row">        
+    <label for="telephone">
+        <f:translate key="tx_projectmanager_domain_model_user.telephone" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="telephone" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.telephone')}" />
+    </div>    
+</div>            
+<div class="form-group row">        
+    <label for="email">
+        <f:translate key="tx_projectmanager_domain_model_user.email" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="email" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.email')}" />
+    </div>    
+</div>        
+<div class="form-group row">        
+    <label for="hourlyRate">
+        <f:translate key="tx_projectmanager_domain_model_user.hourly_rate" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="hourlyRate" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_user.hourly_rate')}" />
+    </div>    
+</div>  
+<div class="form-group row">  
+    <label for="business">
+        <f:translate key="tx_projectmanager_domain_model_user.business" />
+    </label>
+    <div class="col-sm-10">   
+        <f:form.select property="business" options="{businesses}" optionValueField="uid" optionLabelField="name"  prependOptionLabel="Bitte wählen" prependOptionValue="" value="{user.business}" multiple="false" size="{1}" class="form-control" />  
+    </div>  
+</div> 
+<div class="form-group row">  
+    <label for="usergroup">
+        <f:translate key="tx_projectmanager_domain_model_user.usergroup" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.select property="usergroup" options="{usergroups}" optionValueField="uid" optionLabelField="title" value="{user.usergroup}" multiple="true" size="{usergroups -> f:count()}" class="form-control" />      
+    </div>  
+</div> 

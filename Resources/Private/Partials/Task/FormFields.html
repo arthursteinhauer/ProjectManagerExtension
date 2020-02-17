@@ -1,0 +1,154 @@
+<div class="form-group row">
+    <label for="name" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.name" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="name" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.name')}" />
+    </div>    
+</div>    
+<div class="form-group row"> 
+    <label for="description" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.description" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textarea property="description" cols="40" rows="15" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.description')}" />
+    </div>    
+</div>  
+<div class="form-group row">  
+    <label for="project" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.project" />
+    </label>
+    <div class="col-sm-10">      
+        <f:form.select property="project" options="{projects}" optionValueField="uid" optionLabelField="name" value="{project}"  prependOptionLabel="Bitte wählen" prependOptionValue="" multiple="false" size="{1}" class="form-control" />  
+    </div>  
+</div> 
+<div class="form-group row">  
+    <label for="taskMaster" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.task_master" />
+    </label>
+    <div class="col-sm-10">       
+        <f:form.select property="taskMaster" options="{users}" optionValueField="uid" optionLabelField="username" value="{task.taskMaster}" prependOptionLabel="Bitte wählen" prependOptionValue="" multiple="false" size="{1}" class="form-control" />  
+    </div>  
+</div> 
+<div class="form-group row">         
+    <label for="estimatedTimeInHours" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.estimated_time_in_hours" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="estimatedTimeInHours" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.estimated_time_in_hours')}" />
+    </div>    
+</div>              
+<div class="form-group row">         
+    <label for="estimatedCosts" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.estimated_costs" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="estimatedCosts" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.estimated_costs')}" />
+    </div>    
+</div>                  
+<div class="form-group row">         
+    <label for="requiredTimeInHours" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.required_time_in_hours" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="requiredTimeInHours" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.required_time_in_hours')}" />
+    </div>    
+</div>                      
+<div class="form-group row">         
+    <label for="requiredCosts" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.required_costs" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="requiredCosts" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.required_costs')}" />
+    </div>    
+</div>                          
+<div class="form-group row">         
+    <label for="approachDescription" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.approach_description" />
+    </label>
+    <div class="col-sm-10"> 
+        <f:form.textarea property="approachDescription" cols="40" rows="15" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.approach_description')}" />
+    </div>    
+</div> 
+<div class="form-group row">           
+    <label for="taskStartDate" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.task_start_date" />
+    </label>
+    <div class="col-sm-10">
+        <div class="input-group date" id="datetimepicker1">
+            <!--f:form.textfield property="taskStartDate"  value="{task.taskStartDate->f:format.date(date: record.validend, format: 'd.m.Y H:i:s')}" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.task_start_date')}" /-->  
+            <f:form.textfield property="taskStartDate" type="text" value="{task.taskStartDate->f:format.date(format: 'd.m.Y H:i')}" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.task_start_date')}" /> 
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>       
+    </div>          
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            locale: "<f:cObject typoscriptObjectPath='lib.language' />",
+            format: 'DD.MM.YYYY HH:mm'
+        });
+    });
+</script>
+<div class="form-group row">         
+    <label for="taskFinishDate" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.task_finish_date" />
+    </label>
+    <div class="col-sm-10"> 
+        <div class="input-group date" id="datetimepicker2">
+            <!--f:form.textfield property="taskFinishDate"  value="{task.taskFinishDate->f:format.date()}" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.task_finish_date')}" /-->
+            <f:form.textfield property="taskFinishDate" type="text" value="{task.taskFinishDate->f:format.date(format: 'd.m.Y H:i')}" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.task_finish_date')}" /> 
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+    </div>    
+</div> 
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            locale: "<f:cObject typoscriptObjectPath='lib.language' />",
+            format: 'DD.MM.YYYY HH:mm'
+        });
+    });
+</script>
+<div class="form-group row">         
+    <label for="estimatedTaskFinishDate" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.estimated_task_finish_date" />
+    </label>
+    <div class="col-sm-10"> 
+        <div class="input-group date" id="datetimepicker3">
+            <!--f:form.textfield property="estimatedTaskFinishDate"  value="{task.estimatedTaskFinishDate->f:format.date()}" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.estimated_task_finish_date')}" /-->
+            <f:form.textfield property="estimatedTaskFinishDate" type="text" value="{task.estimatedTaskFinishDate->f:format.date(format: 'd.m.Y H:i')}" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.estimated_task_finish_date')}" /> 
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+    </div>    
+</div> 
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker3').datetimepicker({
+            locale: "<f:cObject typoscriptObjectPath='lib.language' />",
+            format: 'DD.MM.YYYY HH:mm'
+        });
+    });
+</script>
+<div class="form-group row">         
+    <label for="status" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.status" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.select property="status" options="{statusEntries}" optionValueField="index" optionLabelField="value" value="{task.status}" multiple="false" size="{1}" class="form-control" />  
+    </div>    
+</div>                                      
+<div class="form-group row">         
+    <label for="comment" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_task.comment" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textarea property="comment" cols="40" rows="15" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_task.comment')}" />
+    </div>    
+</div>                                          

@@ -1,0 +1,56 @@
+
+<f:layout name="Default" />
+
+This template displays a EDIT form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Edit.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div class="panel panel-warning">
+        <div class="panel-heading"><h2 class="panel-title"><f:translate key="edit-task" /></h2></div>    
+        <div class="panel-body">    
+            <f:flashMessages />
+
+            <f:render partial="FormErrors" arguments="{object:Task}" />
+
+            <f:form action="update" name="task" object="{task}" arguments="{search: search, orderProperty: orderProperty, orderStr: orderStr, project: project, user:user}" >
+                <f:render partial="Task/FormFields" arguments="{task: task, users: users, projects: projects, statusEntries:statusEntries,selectedStatusEntry:selectedStatusEntry, project:project, user:user}" />
+                <div class="form-group row">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-warning"> <f:translate key="store-updated-task" /></button>
+                    </div>
+                </div>            
+            </f:form>
+        </div>    
+        <div class="panel-footer">
+            <f:link.action action="list" arguments="{search: search, orderProperty: orderProperty, orderStr: orderStr, project: project, user: user}">
+                <button aria-label="Back to list" class="btn btn-default" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span> <f:translate key="back-to-task-list" /> 
+                </button>            
+            </f:link.action>  
+            <f:link.action action="new" arguments="{search:search, project:project, user:user}">
+                <button aria-label="Add a Task" class="btn btn-info" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <f:translate key="tx_projectmanager_domain_model_task" /> 
+                </button>
+            </f:link.action> 
+            <f:link.action action="show" arguments="{task: task, search: search, orderProperty: orderProperty, orderStr: orderStr, project: project, user: user}">
+                 <button aria-label="Show a Task" class="btn btn-success" type="button">
+                     <span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span>
+                 </button>
+            </f:link.action>              
+            <a href='javascript:ask("<f:uri.action action="delete" arguments="{task: task, search :search, orderProperty: orderProperty, orderStr: orderStr, project: project, user: user}" />", "{f:translate(key:'delete-confirm-question')}")'>
+               <button aria-label="Delete a Task" class="btn btn-danger" type="button"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+            </a>                  
+        </div>    
+
+
+
+    </div>   
+</f:section>

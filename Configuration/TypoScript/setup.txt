@@ -1,0 +1,176 @@
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:projectmanager/Configuration/TypoScript/site-config.txt">
+
+plugin.tx_projectmanager_businesses {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_businesses.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_businesses.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_businesses.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_businesses.persistence.storagePid}
+    }
+}
+
+plugin.tx_projectmanager_projects {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_projects.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_projects.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_projects.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_projects.persistence.storagePid}
+    }
+}
+
+plugin.tx_projectmanager_tasks {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_tasks.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_tasks.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_tasks.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_tasks.persistence.storagePid}
+    }
+}
+
+plugin.tx_projectmanager_mytasks {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_mytasks.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_mytasks.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_mytasks.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_mytasks.persistence.storagePid}
+    }
+}
+
+plugin.tx_projectmanager_users {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_users.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_users.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_users.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_users.persistence.storagePid}
+        classes {
+            Ast\Projectmanager\Domain\Model\User {
+                mapping {
+                    tableName = fe_users
+                    columns {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+plugin.tx_projectmanager_times {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_times.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_times.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_times.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_times.persistence.storagePid}
+    }
+}
+
+plugin.tx_projectmanager_bugs {
+    view {
+        templateRootPaths.0 = {$plugin.tx_projectmanager_bugs.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_projectmanager_bugs.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_projectmanager_bugs.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_projectmanager_bugs.persistence.storagePid}
+    }
+}
+
+plugin.tx_projectmanager._CSS_DEFAULT_STYLE (
+    label.label-form-error {
+/*        background-color:#FF9F9F; */
+        color:red;
+    }
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+    select.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-projectmanager table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-projectmanager table th {
+        font-weight:bold;
+    }
+
+    .tx-projectmanager table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+
+)
+
+config.tx_extbase {
+    persistence {
+        classes {
+            Ast\Projectmanager\Domain\Model\FileReference {
+                mapping {
+                    tableName = sys_file_reference
+                    columns {
+                        uid_local.mapOnProperty = originalFileIdentifier
+                    }
+                }
+            }
+            TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+                subclasses {
+                    Tx_Projectmanager_User = Ast\Projectmanager\Domain\Model\User
+					
+          		}
+            }
+            Ast\Projectmanager\Domain\Model\User {
+                mapping {
+                    tableName = fe_users
+                    recordType = Tx_Projectmanager_User
+                }
+            }
+            TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup {
+                subclasses {
+                    Tx_Projectmanager_UserGroup = Ast\Projectmanager\Domain\Model\UserGroup
+					
+          		}
+            }
+            Ast\Projectmanager\Domain\Model\UserGroup {
+                mapping {
+                    tableName = fe_groups
+                    recordType = Tx_Projectmanager_UserGroup
+                }
+            }
+        }
+    }
+    objects {
+        TYPO3\CMS\Extbase\Domain\Model\FileReference.className = Ast\Projectmanager\Domain\Model\FileReference
+    }
+}
+
+
+
+
+

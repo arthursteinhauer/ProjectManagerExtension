@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-04T07:09:35Z" product-name="projectmanager">
+		<header/>
+		<body>
+			<trans-unit id="projectsPluginUid">
+				<source>uid of the page with the projects plugin</source>
+			</trans-unit>   
+			<trans-unit id="tasksPluginUid">
+				<source>uid of the page with the tasks plugin</source>
+			</trans-unit>    
+			<trans-unit id="timesPluginUid">
+				<source>uid of the page with the times plugin</source>
+			</trans-unit>  
+			<trans-unit id="businessesPluginUid">
+				<source>uid of the page with the businesses plugin</source>
+			</trans-unit>  
+			<trans-unit id="usersPluginUid">
+				<source>uid of the page with the users plugin</source>
+			</trans-unit>                                                                                          
+			<trans-unit id="category-parent">
+				<source>parent category</source>
+			</trans-unit> 
+			<trans-unit id="files-category-parent">
+				<source>parent category for files</source>
+			</trans-unit>     
+			<trans-unit id="images-category-parent">
+				<source>parent category for images</source>
+			</trans-unit>                                                 
+			<trans-unit id="category-parent.please-select">
+				<source>please select</source>
+			</trans-unit>                      
+			<trans-unit id="pagination">
+				<source>pagination</source>
+			</trans-unit>                     
+			<trans-unit id="items-per-page">
+				<source>pagination: items per page</source>
+			</trans-unit>    
+			<trans-unit id="number-of-pagination-links">
+				<source>pagination: number of pagination links</source>
+			</trans-unit>    
+			<trans-unit id="search_for">
+                                <source>Search for...</source>   
+			</trans-unit>                     
+			<trans-unit id="tx_projectmanager_domain_model_business">
+				<source>Business</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.street_number">
+				<source>Street Number</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.county">
+				<source>County</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.telephone">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.handy">
+				<source>Handy</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_business.web">
+				<source>Web</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project">
+				<source>Project</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.estimated_time_in_hours">
+				<source>Estimated Time In Hours</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.estimated_costs">
+				<source>Estimated Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.required_time_in_hours">
+				<source>Required Time In Hours</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.required_costs">
+				<source>Required Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.project_finish_date">
+				<source>Project Finish Date</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.estimated_project_finish_date">
+				<source>Estimated Project Finish Date</source>
+			</trans-unit>                        
+			<trans-unit id="tx_projectmanager_domain_model_project.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.files">
+				<source>Files</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.project_manager">
+				<source>Project Manager</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.task">
+				<source>Task</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.business">
+				<source>Business</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_project.additional_costs">
+				<source>Additional Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task">
+				<source>Task</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.estimated_time_in_hours">
+				<source>Estimated Time In Hours</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.estimated_costs">
+				<source>Estimated Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.required_time_in_hours">
+				<source>Required Time In Hours</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.required_costs">
+				<source>Required Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.approach_description">
+				<source>Approach Description</source>
+			</trans-unit>
+ 			<trans-unit id="tx_projectmanager_domain_model_task.task_start_date">
+				<source>Task Start Date</source>
+			</trans-unit>                        
+			<trans-unit id="tx_projectmanager_domain_model_task.estimated_task_finish_date">
+				<source>Estimated Task Finish Date</source>
+			</trans-unit>                         
+			<trans-unit id="tx_projectmanager_domain_model_task.task_finish_date">
+				<source>Task Finish Date</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.files">
+				<source>Files</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.task_master">
+				<source>Agent</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.times">
+				<source>Times</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.bugs">
+				<source>Bugs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_task.project">
+				<source>Project</source>
+			</trans-unit>                        
+			<trans-unit id="tx_projectmanager_domain_model_files">
+				<source>Files</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_files.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_files.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_files.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_images.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_images.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_images.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_times">
+				<source>Time</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_times.name">
+				<source>Title</source>
+			</trans-unit>                        
+			<trans-unit id="tx_projectmanager_domain_model_times.start">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_times.time_needed">
+				<source>Time needed</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_times.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_times.task">
+				<source>Task</source>
+			</trans-unit>                        
+			<trans-unit id="tx_projectmanager_domain_model_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_usergroup">
+				<source>Projectmanager Permissions</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_read">
+				<source>read business</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_edit">
+				<source>edit business</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_delete">
+				<source>delete business</source>
+			</trans-unit>     
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_new">
+				<source>new business</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_files">
+				<source>open business files</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_upload">
+				<source>upload business files</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_delete">
+				<source>delete business files</source>
+			</trans-unit>   
+ 			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_folder_new">
+				<source>new business folder</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_folder_delete">
+				<source>delete business folder</source>
+			</trans-unit>                          
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_users">
+				<source>User</source>
+			</trans-unit>      
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.business_projects">
+				<source>Projects</source>
+			</trans-unit>
+                        
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.user_read">
+				<source>read user</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.user_edit">
+				<source>edit user</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.user_delete">
+				<source>delete user</source>
+			</trans-unit>     
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.user_new">
+				<source>new user</source>
+			</trans-unit> 
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.user_tasks">
+				<source>tasks</source>
+			</trans-unit>      
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.user_projects">
+				<source>projects</source>
+			</trans-unit>                          
+                           
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_read">
+				<source>read project</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_edit">
+				<source>edit project</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_delete">
+				<source>delete project</source>
+			</trans-unit>     
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_new">
+				<source>new project</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_files">
+				<source>open project files</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_upload">
+				<source>upload project files</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_delete">
+				<source>delete project files</source>
+			</trans-unit>   
+ 			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_folder_new">
+				<source>new project folder</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_folder_delete">
+				<source>delete project folder</source>
+			</trans-unit>                          
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.project_tasks">
+				<source>Tasks</source>
+			</trans-unit>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                             
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_read">
+				<source>read task</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_edit">
+				<source>edit task</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_delete">
+				<source>delete task</source>
+			</trans-unit>     
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_new">
+				<source>new task</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_files">
+				<source>open task files</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_upload">
+				<source>upload task files</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_delete">
+				<source>delete task files</source>
+			</trans-unit>   
+ 			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_folder_new">
+				<source>new task folder</source>
+			</trans-unit>  
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_folder_delete">
+				<source>delete task folder</source>
+			</trans-unit>                          
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_times">
+				<source>Times</source>
+			</trans-unit>      
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.task_times_new">
+				<source>new time entry</source>
+			</trans-unit>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                         
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.time_read">
+				<source>read time</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.time_edit">
+				<source>edit time</source>
+			</trans-unit>   
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.time_delete">
+				<source>delete time</source>
+			</trans-unit>     
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.time_new">
+				<source>new time</source>
+			</trans-unit>  
+                        
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.businesses">
+				<source>businesses</source>
+			</trans-unit> 
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.users">
+				<source>users</source>
+			</trans-unit> 
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.projects">
+				<source>projects</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_usergroup.tasks">
+				<source>tasks</source>
+			</trans-unit>  
+ 			<trans-unit id="tx_projectmanager_domain_model_usergroup.times">
+				<source>times</source>
+			</trans-unit>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+			<trans-unit id="tx_projectmanager_domain_model_user.hourly_rate">
+				<source>Hourly Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_user.business">
+				<source>Business</source>
+			</trans-unit>
+			<trans-unit id="fe_users.tx_extbase_type.Tx_Projectmanager_User">
+				<source>Project Manager User</source>
+			</trans-unit>
+			<trans-unit id="fe_groups.tx_extbase_type.Tx_Projectmanager_UserGroup">
+				<source>Project Manager Usergroup</source>
+			</trans-unit>                        
+			<trans-unit id="tx_projectmanager_domain_model_bug">
+				<source>Bug</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_bug.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_bug.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_bug.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_bug.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_bug.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_bug.dedected_by_user">
+				<source>Dedected By User</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_additionalcosts">
+				<source>Additional Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_additionalcosts.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_additionalcosts.costs">
+				<source>Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_projectmanager_domain_model_additionalcosts.comment">
+				<source>Comment</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,115 @@
+
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.name" /></label>
+    </div>
+    <div class="col-sm-10">
+        <h3 class="margin-top-0"><span class="label label-success">{business.name}</span></h3>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.street" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.street}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.street_number" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.streetNumber}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.zip" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.zip}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+       <label> <f:translate key="tx_projectmanager_domain_model_business.city" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.city}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.country" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.country}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.county" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.county}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.business_director" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.businessDirector}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.telephone" /></label>
+    </div>
+    <div class="col-sm-10">
+        <a href="tel:{business.telephone}">{business.telephone}</a>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.handy" /></label>
+    </div>
+    <div class="col-sm-10">
+        <a href="tel:{business.handy}">{business.handy}</a>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.fax" /></label>
+    </div>
+    <div class="col-sm-10">
+        {business.fax}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.email" /></label>
+    </div>
+    <div class="col-sm-10">
+        <a href="mailto:{business.email}">{business.email}</a>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.web" /></label>
+    </div>
+    <div class="col-sm-10">
+        <a href="{business.web}" target="_blank">{business.web}</a>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_business.categories" /></label>
+    </div>
+    <div class="col-sm-10">
+        <f:for each="{business.categories}" as="category" iteration="iteration">
+            {category.title}<f:if condition='{iteration.isLast}'><f:then></f:then><f:else>,</f:else></f:if>
+        </f:for>
+    </div>
+</div>

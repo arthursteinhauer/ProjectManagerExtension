@@ -1,0 +1,114 @@
+
+
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.name" /></label>
+    </div>
+    <div class="col-sm-10">
+        <h3 class="margin-top-0"><span class="label label-success">{task.name}</span></h3>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.description" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.description}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.project" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.project.name}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.task_master" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.taskMaster.username}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.estimated_time_in_hours" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.estimatedTimeInHours}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.estimated_costs" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.estimatedCosts}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.required_time_in_hours" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.requiredTimeInHours}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.required_costs" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.requiredCosts}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.approach_description" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.approachDescription}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.task_start_date" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.taskStartDate -> f:format.date(format: 'd.m.Y H:i')}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.estimated_task_finish_date" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.estimatedTaskFinishDate -> f:format.date(format: 'd.m.Y H:i')}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.task_finish_date" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.taskFinishDate -> f:format.date(format: 'd.m.Y H:i')}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.status" /></label>
+    </div>
+    <div class="col-sm-10">
+        {selectedStatusEntry}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_task.comment" /></label>
+    </div>
+    <div class="col-sm-10">
+        {task.comment}
+    </div>
+</div>

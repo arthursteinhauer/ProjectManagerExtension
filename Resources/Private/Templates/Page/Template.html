@@ -1,0 +1,86 @@
+    <header>            
+        <div class="container">
+            <div class="row top">
+                <div class="col-sm-3"><!--f:cObject typoscriptObjectPath="lib.logo" /-->
+                  <a href="/"><img src="typo3conf/ext/projectmanager/Resources/Public/Images/projekt-manager-logo.png" class="logo2 img-responsive" /></a>
+                </div>
+                <f:security.ifAuthenticated>
+                    <f:then>
+                        <div class="col-sm-1">
+                            <f:link.page pageUid="1" additionalParams="{logintype:'logout'}">Abmelden</f:link.page>
+                        </div>
+                    </f:then>
+                </f:security.ifAuthenticated>
+
+                <div class="col-sm-6">
+                    <f:cObject typoscriptObjectPath="lib.languagenav" />               
+                </div>      
+            </div>    
+        </div>   
+        <f:if condition="{f:cObject(typoscriptObjectPath:'lib.currentBackendLayoutUid')} != 4">
+            <f:then>     
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12">                            
+                      <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                          <!-- Brand and toggle get grouped for better mobile display -->
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <span class="visible-xs navbar-brand"></span>
+                          </div>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <f:cObject typoscriptObjectPath="lib.navbar" />
+                          </div><!-- /.navbar-collapse -->                        
+                        </div><!-- /.container-fluid -->
+                      </nav>        
+                    </div>             
+                  </div>      
+              </div>        
+            </f:then>
+        </f:if>        
+    </header>
+    
+    <main>
+        <div class="container">
+          <f:if condition="{f:cObject(typoscriptObjectPath:'lib.currentBackendLayoutUid')} == 1">
+            <f:then>
+              <f:render partial="1-Spalte" arguments="{_all}" />
+            </f:then>
+          </f:if>
+          <f:if condition="{f:cObject(typoscriptObjectPath:'lib.currentBackendLayoutUid')} == 2">
+            <f:then>222
+              <f:render partial="2-Spalten" arguments="{_all}" />
+            </f:then>333
+          </f:if>          
+          <f:if condition="{f:cObject(typoscriptObjectPath:'lib.currentBackendLayoutUid')} == 3">
+            <f:then>333
+              <f:render partial="3-Spalten" arguments="{_all}" />
+            </f:then>
+          </f:if>  
+          <f:if condition="{f:cObject(typoscriptObjectPath:'lib.currentBackendLayoutUid')} == 4">
+            <f:then>
+              <f:render partial="Login" arguments="{_all}" />
+            </f:then>
+          </f:if>           
+        </div>
+    </main>
+      
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>&copy; website-professional.de - Arthur Steinhauer</p>
+                </div>
+                <div class="col-sm-12">
+                  <!--f:cObject typoscriptObjectPath="lib.footernav" /-->
+                </div>
+            </div>
+        </div>     
+    </footer>

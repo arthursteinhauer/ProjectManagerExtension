@@ -1,0 +1,43 @@
+
+<f:layout name="Default" />
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        New.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div class="panel panel-info">
+        <div class="panel-heading"><h2 class="panel-title"><f:translate key="new-user" /></h2></div>    
+        <div class="panel-body"> 
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" arguments="{object:User}" />
+
+<f:form action="create"  enctype="multipart/form-data"  name="newUser" object="{newUser}" arguments="{search: search, orderProperty : orderProperty, orderStr : orderStr}">
+<f:render partial="User/FormFields" arguments="{usergroups:usergroups,businesses:businesses}" />
+                <div class="form-group row">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <f:translate key="create-new" /></button>
+                    </div>
+                </div>         
+            </f:form>
+        </div>
+        <div class="panel-footer">
+            <f:link.action action="list" arguments="{search: search, orderProperty: orderProperty, orderStr: orderStr}">
+                <button aria-label="Back to list" class="btn btn-default" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span> <f:translate key="back-to-user-list" /> 
+                </button>            
+            </f:link.action>            
+        </div>               
+
+
+    </div> 
+</f:section>

@@ -1,0 +1,47 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div class="panel panel-success">
+        <div class="panel-heading"><h2 class="panel-title"><f:translate key="business-details" /></h2></div>    
+
+
+        <f:flashMessages />
+        <div class="panel-body">
+            <f:render partial="Business/Properties" arguments="{business:business}" />
+        </div>
+        <div class="panel-footer">
+            <f:link.action action="list" arguments="{search: search, orderProperty : orderProperty, orderStr : orderStr}">
+                <button aria-label="Back to list" class="btn btn-default" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span> <f:translate key="back-to-business-list" /> 
+                </button>            
+            </f:link.action>
+            <f:link.action action="new" arguments="{search: search, orderProperty : orderProperty, orderStr : orderStr}">
+                <button aria-label="Add a Company" class="btn btn-info" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <f:translate key="tx_projectmanager_domain_model_business" /> 
+                </button>
+            </f:link.action> 
+            <f:link.action action="edit" arguments="{business : business, search: search, orderProperty : orderProperty, orderStr : orderStr}">
+                <button aria-label="Edit a Company" class="btn btn-warning" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                </button>
+            </f:link.action>            
+            <a href='javascript:ask("<f:uri.action action="delete" arguments="{business : business, search: search, orderProperty : orderProperty, orderStr : orderStr}" />", "{f:translate(key:'delete-confirm-question')}")'>
+               <button aria-label="Delete a Company" class="btn btn-danger" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-trash"></span>
+                </button>
+            </a>              
+        </div> 
+    </div> 
+</f:section>

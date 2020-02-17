@@ -1,0 +1,113 @@
+<div class="form-group row">
+    <label for="name" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.name" /> 
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="name" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.name')}" />
+    </div>    
+</div>          
+
+<div class="form-group row">        
+    <label for="street" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.street" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="street" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.street')}" />
+    </div>          
+</div>        
+<div class="form-group row">        
+    <label for="streetNumber" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.street_number" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="streetNumber" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.street_number')}" />
+    </div>           
+</div>        
+<div class="form-group row">        
+    <label for="zip" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.zip" />
+    </label>
+    <div class="col-sm-10">   
+        <f:form.textfield property="zip" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.zip')}" />
+    </div>           
+</div>
+<div class="form-group row">        
+    <label for="city" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.city" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="city" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.city')}" />
+    </div>           
+</div>        
+<div class="form-group row">        
+    <label for="country" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.country" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="country" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.country')}" />
+    </div>           
+</div>        
+<div class="form-group row">        
+    <label for="county" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.county" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="county" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.county')}" />
+    </div>           
+</div>   
+<div class="form-group row">        
+    <label for="businessDirector" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.business_director" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="businessDirector" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.business_director')}" />
+    </div>           
+</div> 
+<div class="form-group row">        
+    <label for="telephone" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.telephone" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="telephone" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.telephone')}" />
+    </div>           
+</div>        
+<div class="form-group row">        
+    <label for="handy" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.handy" />
+    </label>
+    <div class="col-sm-10">   
+        <f:form.textfield property="handy" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.handy')}" />
+    </div>           
+</div>        
+<div class="form-group row">        
+    <label for="fax" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.fax" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="fax" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.fax')}" />
+    </div>           
+</div>        
+<div class="form-group row">        
+    <label for="email" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.email" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.textfield property="email" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.email')}" />
+    </div>           
+</div>
+<div class="form-group row">
+    <label for="email" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.web" />
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="web" class="form-control" placeholder="{f:translate(key:'tx_projectmanager_domain_model_business.web')}" />
+    </div>
+</div>
+<div class="form-group row">  
+    <label for="categories" class="col-sm-2 form-control-label">
+        <f:translate key="tx_projectmanager_domain_model_business.categories" />
+    </label>
+    <div class="col-sm-10">    
+        <f:form.select property="categories" options="{categories}" optionValueField="uid" optionLabelField="title" value="{business.categories}" multiple="true" size="{categories -> f:count()}" class="form-control" />      
+    </div>  
+</div> 

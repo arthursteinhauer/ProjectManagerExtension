@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-11-04T07:09:35Z"
+          product-name="projectmanager">
+        <header/>
+        <body>
+            <trans-unit id="name.description">
+                <source>name</source>
+            </trans-unit>
+            <trans-unit id="street.description">
+                <source>street</source>
+            </trans-unit>
+            <trans-unit id="street_number.description">
+                <source>streetNumber</source>
+            </trans-unit>
+            <trans-unit id="zip.description">
+                <source>zip</source>
+            </trans-unit>
+            <trans-unit id="city.description">
+                <source>city</source>
+            </trans-unit>
+            <trans-unit id="country.description">
+                <source>country</source>
+            </trans-unit>
+            <trans-unit id="county.description">
+                <source>county</source>
+            </trans-unit>
+            <trans-unit id="telephone.description">
+                <source>telephone</source>
+            </trans-unit>
+            <trans-unit id="handy.description">
+                <source>handy</source>
+            </trans-unit>
+            <trans-unit id="fax.description">
+                <source>fax</source>
+            </trans-unit>
+            <trans-unit id="email.description">
+                <source>email</source>
+            </trans-unit>
+            <trans-unit id="web.description">
+                <source>web</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

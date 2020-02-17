@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-06-14T16:50:57Z"
+          product-name="projectmanager">
+        <header/>
+        <body>
+            <trans-unit id="projectsPluginUid">
+                <source>uid of the page with the projects plugin</source>
+                <target>uid der Seite mit dem projects-Plugin</target>
+            </trans-unit>
+            <trans-unit id="tasksPluginUid">
+                <source>uid of the page with the tasks plugin</source>
+                <target>uid der Seite mit dem tasks-Plugin</target>
+            </trans-unit>
+            <trans-unit id="timesPluginUid">
+                <source>uid of the page with the times plugin</source>
+                <target>uid der Seite mit dem times-Plugin</target>
+            </trans-unit>
+            <trans-unit id="businessesPluginUid">
+                <source>uid of the page with the businesses plugin</source>
+                <target>uid der Seite mit dem businesses-Plugin</target>
+            </trans-unit>
+            <trans-unit id="usersPluginUid">
+                <source>uid of the page with the users plugin</source>
+                <target>uid der Seite mit dem users-Plugin</target>
+            </trans-unit>
+            <trans-unit id="category-parent">
+                <source>parent category</source>
+                <target>Stamm-Kategorie</target>
+            </trans-unit>
+            <trans-unit id="files-category-parent">
+                <source>parent category for files</source>
+                <target>Stamm-Kategorie für Dateien</target>
+            </trans-unit>
+            <trans-unit id="images-category-parent">
+                <source>parent category for images</source>
+                <target>Stamm-Kategorie für Bilder</target>
+            </trans-unit>
+            <trans-unit id="category-parent.please-select">
+                <source>please select</source>
+                <target>Bitte wählen</target>
+            </trans-unit>
+            <trans-unit id="pagination">
+                <source>pagination</source>
+                <target>Pagination</target>
+            </trans-unit>
+            <trans-unit id="items-per-page">
+                <source>pagination: items per page</source>
+                <target>Pagination: Einträge pro Seite</target>
+            </trans-unit>
+            <trans-unit id="number-of-pagination-links">
+                <source>pagination: number of pagination links</source>
+                <target>Pagination: Anzahl der Paginations-Links</target>
+            </trans-unit>
+            <trans-unit id="search_for">
+                <source>Search for...</source>
+                <target>Suche nach...</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business">
+                <source>Business</source>
+                <target>Firma</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.street">
+                <source>Street</source>
+                <target>Straße</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.street_number">
+                <source>Street Number</source>
+                <target>Hausnummer</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.zip">
+                <source>Zip</source>
+                <target>PLZ</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.city">
+                <source>City</source>
+                <target>Stadt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.country">
+                <source>Country</source>
+                <target>Land</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.county">
+                <source>County</source>
+                <target>Bundesland</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.business_director">
+                <source>Business director</source>
+                <target>Geschäftsführer</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.telephone">
+                <source>Telephone</source>
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.handy">
+                <source>Handy</source>
+                <target>Handy</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.fax">
+                <source>Fax</source>
+                <target>Fax</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.email">
+                <source>E-Mail</source>
+                <target>E-Mail</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.web">
+                <source>Web</source>
+                <target>Web</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.trade">
+                <source>Trade</source>
+                <target>Branche</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.project">
+                <source>Project</source>
+                <target>Projekt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_business.employee">
+                <source>Employee</source>
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project">
+                <source>Project</source>
+                <target>Projekt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.estimated_time_in_hours">
+                <source>Estimated Time in Hours</source>
+                <target>Geschätzte Zeit (Stunden)</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.estimated_costs">
+                <source>Estimated Costs</source>
+                <target>Geschätzte Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.required_time_in_hours">
+                <source>Required Time in Hours</source>
+                <target>Tatsächlich gebrauchte Zeit (Stunden)</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.required_costs">
+                <source>Required Costs</source>
+                <target>Tatsächlich angefallene Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.project_start_date">
+                <source>Project Start Date</source>
+                <target>Projekt Start</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.project_finish_date">
+                <source>Project Finish Date</source>
+                <target>Projekt Ende</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.estimated_project_finish_date">
+                <source>Estimated Project Finish Date</source>
+                <target>Geplantes Projekt Ende</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status.open">
+                <source>open</source>
+                <target>offen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status.work-in-progress">
+                <source>work in progress</source>
+                <target>in Arbeit</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status.ready-for-check">
+                <source>ready for check</source>
+                <target>fertig zur Abschluss-Prüfung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status.ready-for-invoice">
+                <source>ready for invoice</source>
+                <target>fertig zum abrechnen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status.invoiced">
+                <source>invoiced</source>
+                <target>abgerechnet</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.status.paid">
+                <source>paid</source>
+                <target>bezahlt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.critical">
+                <source>critical</source>
+                <target>kritisch</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.comment">
+                <source>Comment</source>
+                <target>Kommentar</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.files">
+                <source>Files</source>
+                <target>Dateien</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.folder">
+                <source>Folder</source>
+                <target>Verzeichnis</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.project_manager">
+                <source>Project Manager</source>
+                <target>Projektleiter</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.task">
+                <source>Tasks</source>
+                <target>Aufgaben</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.business">
+                <source>Business</source>
+                <target>Firma</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_project.additional_costs">
+                <source>Additional Costs</source>
+                <target>zusätzliche Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task">
+                <source>Task</source>
+                <target>Aufgabe</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.project">
+                <source>Project</source>
+                <target>Projekt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.estimated_time_in_hours">
+                <source>Estimated Time in Hours</source>
+                <target>Geschätzte Zeit (Stunden)</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.estimated_costs">
+                <source>Estimated Costs</source>
+                <target>Geschätzte Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.required_time_in_hours">
+                <source>Required Time in Hours</source>
+                <target>Tatsächlich gebrauchte Zeit (Stunden)</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.required_costs">
+                <source>Required Costs</source>
+                <target>Tatsächliche Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.approach_description">
+                <source>Approach Description</source>
+                <target>Beschreibung der Problemlösung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.task_start_date">
+                <source>Task Start Date</source>
+                <target>Aufgabe begonnen am</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.estimated_task_finish_date">
+                <source>Estimated Task Finish Date</source>
+                <target>Geplantes Aufgaben-Ende</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.task_finish_date">
+                <source>Task Finish Date</source>
+                <target>Aufgabe beendet am</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.status">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.status.open">
+                <source>open</source>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.status.ready-for-check">
+                <source>ready for check</source>
+                <target>fertig zum prüfen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.status.bug-was-found">
+                <source>bug was found</source>
+                <target>Fehler gefunden</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.status.finished">
+                <source>finished</source>
+                <target>beendet</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.comment">
+                <source>Comment</source>
+                <target>Kommentar</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.files">
+                <source>Files</source>
+                <target>Dateien</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.times">
+                <source>Times</source>
+                <target>Zeit</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.task_master">
+                <source>Agent</source>
+                <target>Bearbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.bugs">
+                <source>Bugs</source>
+                <target>Bugs</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_task.project">
+                <source>Project</source>
+                <target>Projekt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_files">
+                <source>Files</source>
+                <target>Dateien</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_files.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_files.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_files.file">
+                <source>File</source>
+                <target>Datei</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_folder">
+                <source>Folder</source>
+                <target>Verzeichnis</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_folder.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_folder.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_folder.files">
+                <source>Files</source>
+                <target>Dateien</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_folder.parent">
+                <source>Parent</source>
+                <target>Eltern-Verzeichnis</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_times">
+                <source>Time</source>
+                <target>Zeit</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_times.name">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_times.start">
+                <source>Start</source>
+                <target>Anfang</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_times.time_needed">
+                <source>Time needed</source>
+                <target>benötigte Zeit</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_times.comment">
+                <source>Comment</source>
+                <target>Kommentar</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_times.task">
+                <source>Task</source>
+                <target>Aufgabe</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user">
+                <source>User</source>
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.forename">
+                <source>Forename</source>
+                <target>Vorname</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.surname">
+                <source>Surname</source>
+                <target>Nachname</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.street">
+                <source>Street</source>
+                <target>Straße</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.street_number">
+                <source>Street Number</source>
+                <target>Hausnummer</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.zip">
+                <source>Zip</source>
+                <target>PLZ</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.city">
+                <source>City</source>
+                <target>Stadt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.country">
+                <source>Country</source>
+                <target>Land</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.county">
+                <source>County</source>
+                <target>Bundesland</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.telephone">
+                <source>Telephone</source>
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.handy">
+                <source>Handy</source>
+                <target>Handy</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.email">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.hourly_rate">
+                <source>Hourly Rate</source>
+                <target>Stundensatz in €</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_user.category">
+                <source>Category</source>
+                <target>Mitarbeiter-Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usercategory">
+                <source>User Category</source>
+                <target>Mitarbeiter-Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usercategory.name">
+                <source>Name</source>
+                <target>Kategorie-Bezeichnung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup">
+                <source>Projectmanager Permissions</source>
+                <target>Projektmanager-Rechte</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_read">
+                <source>read business</source>
+                <target>Kunde/Firma lesen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_edit">
+                <source>edit business</source>
+                <target>Kunde/Firma bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_delete">
+                <source>delete business</source>
+                <target>Kunde/Firma löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_new">
+                <source>new business</source>
+                <target>neuen Kunde/Firma anlegen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_files">
+                <source>open business files</source>
+                <target>Kunde/Firma Dateien öffnen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_upload">
+                <source>upload business files</source>
+                <target>Kunde/Firma Dateien hochladen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_delete">
+                <source>delete business files</source>
+                <target>Kunde/Firma Dateien löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_folder_new">
+                <source>new business folder</source>
+                <target>Neuer Kunde/Firma Ordner</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_files_folder_delete">
+                <source>delete business folder</source>
+                <target>Kunde/Firma Ordner löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_users">
+                <source>User of this business</source>
+                <target>Mitarbeiter dieser Firma</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.business_projects">
+                <source>Projects of this business</source>
+                <target>Projekte dieser Firma</target>
+            </trans-unit>
+
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.user_read">
+                <source>read user</source>
+                <target>Mitarbeiter lesen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.user_edit">
+                <source>edit user</source>
+                <target>Mitarbeiter bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.user_delete">
+                <source>delete user</source>
+                <target>Mitarbeiter löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.user_new">
+                <source>new user</source>
+                <target>neuen Mitarbeiter anlegen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.user_tasks">
+                <source>tasks</source>
+                <target>Aufgaben des Mitarbeiters</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.user_projects">
+                <source>projects</source>
+                <target>Projekte des Mitarbeiters</target>
+            </trans-unit>
+
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_read">
+                <source>read project</source>
+                <target>Projekt lesen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_edit">
+                <source>edit project</source>
+                <target>Projekt bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_delete">
+                <source>delete project</source>
+                <target>Projekt löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_new">
+                <source>new project</source>
+                <target>neues Projekt anlegen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_files">
+                <source>open project files</source>
+                <target>Projekt-Dateien öffnen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_upload">
+                <source>upload project files</source>
+                <target>Projekt-Dateien hochladen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_delete">
+                <source>delete project files</source>
+                <target>Projekt-Dateien löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_folder_new">
+                <source>new project folder</source>
+                <target>neuen Projekt-Ordner anlegen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_files_folder_delete">
+                <source>delete project folder</source>
+                <target>Projekt-Ordner löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.project_tasks">
+                <source>Tasks</source>
+                <target>Aufgaben des Projekts lesen</target>
+            </trans-unit>
+
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_read">
+                <source>read task</source>
+                <target>Aufgaben lesen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_edit">
+                <source>edit task</source>
+                <target>Aufgaben bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_delete">
+                <source>delete task</source>
+                <target>Aufgaben löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_new">
+                <source>new task</source>
+                <target>neuen Aufgabe anlegen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_files">
+                <source>open task files</source>
+                <target>Aufgaben-Dateien öffnen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_upload">
+                <source>upload task files</source>
+                <target>Aufgaben-Dateien hochladen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_delete">
+                <source>delete task files</source>
+                <target>Aufgaben-Dateien löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_folder_new">
+                <source>new task folder</source>
+                <target>Neuer Aufgaben-Ordner</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_files_folder_delete">
+                <source>delete task folder</source>
+                <target>Aufgaben-Ordner löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_times">
+                <source>times</source>
+                <target>Zeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.task_times_new">
+                <source>new time entry</source>
+                <target>neue Zeit eintragen</target>
+            </trans-unit>
+
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.time_read">
+                <source>read time</source>
+                <target>Zeiten lesen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.time_edit">
+                <source>edit time</source>
+                <target>Zeiten bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.time_delete">
+                <source>delete time</source>
+                <target>Zeiten löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.time_new">
+                <source>new time</source>
+                <target>neuen Zeit anlegen</target>
+            </trans-unit>
+
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.businesses">
+                <source>businesses</source>
+                <target>Kunden/Geschäfte</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.users">
+                <source>users</source>
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.projects">
+                <source>projects</source>
+                <target>Projekte</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.tasks">
+                <source>tasks</source>
+                <target>Aufgaben</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_usergroup.times">
+                <source>times</source>
+                <target>Zeiten</target>
+            </trans-unit>
+
+            <trans-unit id="fe_users.tx_extbase_type.Tx_Projectmanager_User">
+                <source>Project Manager User</source>
+                <target>Projectmanager-User</target>
+            </trans-unit>
+            <trans-unit id="fe_groups.tx_extbase_type.Tx_Projectmanager_UserGroup">
+                <source>Project Manager Usergroup</source>
+                <target>Projektmanager-Benutzergruppe</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug">
+                <source>Bug</source>
+                <target>Bug</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug.comment">
+                <source>Comment</source>
+                <target>Kommentar</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug.solved">
+                <source>Solved</source>
+                <target>Erledigt</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug.image">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_bug.dedected_by_user">
+                <source>Dedected By User</source>
+                <target>Festgestellt von Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_additionalcosts">
+                <source>Additional Costs</source>
+                <target>Zusätzliche Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_additionalcosts.name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_additionalcosts.costs">
+                <source>Costs</source>
+                <target>Kosten</target>
+            </trans-unit>
+            <trans-unit id="tx_projectmanager_domain_model_additionalcosts.comment">
+                <source>Comment</source>
+                <target>Kommentar</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

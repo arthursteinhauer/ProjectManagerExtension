@@ -1,0 +1,156 @@
+{namespace m=Ast\Projectmanager\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1><f:translate key="tx_projectmanager_domain_model_project" />: {project.name} - <f:translate key="tx_projectmanager_domain_model_files" />:</h1>
+        </div>
+    </div>
+
+    <f:flashMessages />
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--f:link.action action="newFolder"-->
+                        <button aria-label="Add a Folder" class="btn btn-info" type="button" data-toggle="modal" data-target="#newFolder">
+                            <span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <f:translate key="tx_projectmanager_domain_model_folder.newfolder" />
+                        </button>
+                    <!--/f:link.action-->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="newFolder" role="dialog">
+                        <div class="modal-dialog">
+                           
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4><span class="glyphicon glyphicon-folder-close"></span> <f:translate key="tx_projectmanager_domain_model_folder.newfolder" /></h4>
+                                </div>
+                                <div class="modal-body" style="padding:40px 50px;">
+                                    <f:form action="newFolder"  enctype="multipart/form-data"  name="newFolder" object="{newFolder}" arguments="{project: project, folder: currentFolder, search: search, orderProperty : orderProperty, orderStr : orderStr, business: business, user: user}">
+                                    
+                                        <div class="form-group">
+                                            <label for="name"><f:translate key="tx_projectmanager_domain_model_folder.name" /></label>
+                                            <f:form.textfield property="name" class="form-control"  />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description"><f:translate key="tx_projectmanager_domain_model_folder.description" /></label><br />
+                                            <f:form.textarea class="form-control" property="description" cols="40" rows="5" />                                                                  
+                                        </div>
+                                        <button type="submit" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> <f:translate key="tx_projectmanager_domain_model_folder.createnewfolder" /></button>         
+                                  
+                                    </f:form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                     
+
+                </div>
+                <div class="col-sm-3">
+                    <f:form enctype="multipart/form-data" action="newFile" object="files" name="files" additionalAttributes="{role:'form'}" arguments="{project: project, folder: currentFolder, search: search, orderProperty: orderProperty, orderStr: orderStr, business: business, user: user}">
+                        <div class="form-group no-margin-bottom">
+                            <input id="input-1" type="file" class="file" name="tx_projectmanager_projects[files][file]">                           
+                        </div>                      
+                    </f:form>                    
+                </div>    
+                <div class="col-sm-6">                    
+
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+
+                <table  class="table businesslist">
+
+                    <f:if condition="{currentFolder.parent}">
+                        <f:then>
+                            <tr>
+                                <td>
+                                    <f:link.action action="listFiles" arguments="{project: project, search: search, orderProperty: orderProperty, orderStr: orderStr, currentFolder: currentFolder.parent, business: business, user: user}"><button aria-label="Show Files" class="btn btn-folder" type="button"><span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span></button></f:link.action> ..
+                                </td>                        
+                                <td><f:translate key="tx_projectmanager_domain_model_folder.onelevelup" /></td>
+                                <td></td>
+                            </tr> 
+                        </f:then>
+                    </f:if> 
+                    <tr>
+                        <td><strong><f:translate key="current-folder" />:</strong></td>
+                        <td></td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td><button aria-label="Show Files" class="btn btn-folder" type="button"><span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span></button> 
+                            <span class="foldername">{currentFolder.name}</span></td>
+                        <td>{path}</td>
+                        <td></td>                        
+                    </tr> 
+                    <tr>
+                        <td><strong><f:translate key="tx_projectmanager_domain_model_folder.contains" />:</strong></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <f:for each="{childFolders}" as="folder">
+                        <tr>                          
+                            <td>
+                                <f:link.action action="listFiles" arguments="{project: project, search: search, orderProperty: orderProperty, orderStr: orderStr, currentFolder: folder, business: business, user: user}"><button aria-label="Show Files" class="btn btn-folder" type="button"><span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span></button></f:link.action> 
+                                <span class="foldername">{folder.name}</span>
+                            </td>  
+                            <td>
+                                {folder.description}
+                            </td>
+                            <td>
+                                <a href='javascript:ask("<f:uri.action action="deleteFolder" arguments="{project: project, currentFolder: currentFolder, folder: folder, search: search, orderProperty: orderProperty, orderStr: orderStr, business :business, user: user}" />", "{f:translate(key:'delete-confirm-question')}")'>
+                                   <button aria-label="Delete a Folder" class="btn btn-danger" type="button"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+                                </a>                                
+                            </td>
+                        </tr>                        
+                    </f:for>    
+
+                    <f:for each="{currentFolder.files}" as="file">
+                        <tr>                            
+                            <td>
+                                <a title="{file.name}" href="{file.file.originalResource.publicUrl}">{file.file.originalResource.name}</a><br />
+                                <f:translate key="tx_projectmanager_domain_model_files.filesize" />: {v:media.size(path: file.file.originalResource.publicUrl) -> f:format.bytes(decimals: 2, decimalSeparator: '.', thousandsSeparator: ',')}
+                            </td>
+                            <td>{file.name}<br />
+                                {file.description}
+                            </td>
+                            <td>
+                                <a href='javascript:ask("<f:uri.action action="deleteFile" arguments="{project: project, folder: currentFolder, files: file, search: search, orderProperty: orderProperty, orderStr: orderStr, business: business, user: user}" />", "{f:translate(key:'delete-confirm-question')}")'>
+                                   <button aria-label="Delete a File" class="btn btn-danger" type="button"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+                                </a>                                
+                            </td>
+                        </tr>
+                    </f:for>                     
+
+                </table>
+
+            </div>
+        </div>
+        <div class="panel-footer">
+            <f:link.action action="list" arguments="{search: search, orderProperty : orderProperty, orderStr : orderStr, business: business, user: user}" >
+                <button aria-label="Back to list" class="btn btn-default" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span> <f:translate key="back-to-project-list" />  
+                </button>            
+            </f:link.action>                   
+        </div>
+    </div>    
+
+</f:section>

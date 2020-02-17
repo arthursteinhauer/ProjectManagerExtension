@@ -1,0 +1,106 @@
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.username" /></label>
+    </div>
+    <div class="col-sm-10">
+        <h3 class="margin-top-0"><span class="label label-success">{user.username}</span></h3>
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.name" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.name}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.street" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.address}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.zip" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.zip}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.city" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.city}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.country" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.country}
+    </div>
+</div>
+<!--div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.county" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.county}
+    </div>
+</div-->
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.telephone" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.telephone}
+    </div>
+</div>
+<!--div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.handy" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.handy}
+    </div>
+</div-->
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.email" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.email}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.hourly_rate" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.hourlyRate}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.business" /></label>
+    </div>
+    <div class="col-sm-10">
+        {user.business.name}
+    </div>
+</div>
+<div class="row padding-bottom-10">
+    <div class="col-sm-2">
+        <label><f:translate key="tx_projectmanager_domain_model_user.usergroup" /></label>
+    </div>
+    <div class="col-sm-10">
+        <f:for each="{user.usergroup}" as="usergroup" iteration="iteration">
+            {usergroup.title}<f:if condition='{iteration.isLast}'><f:then></f:then><f:else>,</f:else></f:if>
+        </f:for>
+    </div>
+</div>

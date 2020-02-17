@@ -1,0 +1,53 @@
+
+<f:layout name="Default" />
+
+This template displays a EDIT form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Edit.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div class="panel panel-warning">
+        <div class="panel-heading"><h2 class="panel-title"><f:translate key="edit-times" /></h2></div>    
+        <div class="panel-body">    
+            <f:flashMessages />
+
+            <f:render partial="FormErrors" arguments="{object:Times}" />
+
+            <f:form action="update" name="times" object="{times}" arguments="{search:search, orderProperty: orderProperty, orderStr: orderStr, task:task}" >
+                <f:render partial="Times/FormFields" arguments="{times:times, tasks:tasks, task:task}" />
+                <div class="form-group row">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-warning"> <f:translate key="store-updated-task" /></button>
+                    </div>
+                </div>            
+            </f:form>
+        </div>    
+        <div class="panel-footer">
+            <f:link.action action="list" arguments="{search:search, orderProperty: orderProperty, orderStr: orderStr, task:task}">
+                <button aria-label="Back to list" class="btn btn-default" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span> <f:translate key="back-to-times-list" /> 
+                </button>            
+            </f:link.action>  
+            <f:link.action action="new" arguments="{search:search, orderProperty: orderProperty, orderStr: orderStr, task:task}">
+                <button aria-label="Add a Time" class="btn btn-info" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-plus"></span> <f:translate key="tx_projectmanager_domain_model_times" /> 
+                </button>
+            </f:link.action> 
+            <f:link.action action="show" arguments="{times:times, search:search, orderProperty: orderProperty, orderStr: orderStr, task:task}">
+                 <button aria-label="Show a Time" class="btn btn-success" type="button">
+                     <span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span>
+                 </button>
+            </f:link.action>               
+            <a href='javascript:ask("<f:uri.action action="delete" arguments="{times : times, search:search, orderProperty: orderProperty, orderStr: orderStr, task:task}" />", "{f:translate(key:'delete-confirm-question')}")'>
+               <button aria-label="Delete a Time" class="btn btn-danger" type="button"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+            </a>                  
+        </div>    
+    </div>   
+</f:section>
